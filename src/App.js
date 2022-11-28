@@ -1,5 +1,5 @@
 import { Container, Flex, Heading, List, Stack } from "@chakra-ui/react";
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import { useDrop } from "react-dnd";
 import Player from "./components/Player";
 
