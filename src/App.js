@@ -1,5 +1,5 @@
 import { Container, Flex, Heading, List, Stack } from "@chakra-ui/react";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { useDrop } from "react-dnd";
 import Player from "./components/Player";
 
@@ -34,7 +34,7 @@ function App() {
     setTeam((prev) => prev.filter((_, i) => item.index !== i));
     setPlayer((prev) => [...prev, item]);
   };
-
+ 
   return (
     <Container maxW="800px">
       <Heading p="2" align="center" color="GrayText">

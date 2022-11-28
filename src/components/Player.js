@@ -1,8 +1,8 @@
 import { ListItem } from "@chakra-ui/react";
 import React from "react";
-import { useDrag } from "react-dnd";
+import { useDrag,useDrop } from "react-dnd";
 
-const Player = ({ item, playerType, onDropPlayer, index }) => {
+const Player = ({ item, playerType, onDropPlayer, index, moveCard }) => {
   const [{ isDragging }, dragRef] = useDrag({
     type: playerType,
     item: () => ({ ...item, index }),
@@ -16,6 +16,7 @@ const Player = ({ item, playerType, onDropPlayer, index }) => {
     collect: (monitor) => ({
       isDragging: monitor.isDragging(),
     }),
+ 
   });
 
   return (
